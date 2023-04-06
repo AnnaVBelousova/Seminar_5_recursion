@@ -1,5 +1,4 @@
-
-# Задание 1 Написать программу, которая будет складывать, вычитать,
+# Задание 1. Написать программу, которая будет складывать, вычитать,
 # умножать или делить два числа. Числа и знак операции вводятся пользователем.
 # После выполнения вычисления программа не должна завершаться, а должна
 # запрашивать новые данные для вычислений. Завершение программы должно
@@ -22,9 +21,14 @@
 # Введите первое число: вп
 # Вы вместо трехзначного числа ввели строку (((. Исправьтесь
 # Введите операцию (+, -, *, / или 0 для выхода):
+
+
  
+
 def operations_with_numbers():
+
     operator = input("Введите знак операции +, -, *, /, 0:")
+
     if operator == "0":
         print("Программа завершена")
         return    
@@ -36,6 +40,7 @@ def operations_with_numbers():
             except ValueError:
                 print("Это не число!")
                 operations_with_numbers()
+
             if operator == '+':
                 answer = n1+n2
                 print(f'Ваш результат {answer}')
@@ -52,6 +57,7 @@ def operations_with_numbers():
                 return operations_with_numbers()
             
             elif operator == "/":
+
                 try:
                     answer = n1 / n2
                     print(f'Ваш результат {answer}')
@@ -61,5 +67,8 @@ def operations_with_numbers():
                     print("На ноль делить нельзя!")
         else: 
             print("Неверный знак!")
+
     return operations_with_numbers()
+
 operations_with_numbers()     
+ 
